@@ -4,7 +4,7 @@ stages{
 stage('BUILD'){
 steps
 {
-withMaven(maven : 'MVN3.3.9')
+withMaven(maven : 'maven')
 {
 sh 'mvn clean compile'
 }
@@ -15,7 +15,7 @@ sh 'mvn clean compile'
 stage('TEST'){
 steps
 {
-withMaven(maven : 'MVN3.3.9')
+withMaven(maven : 'maven')
 {
 sh 'mvn test'
 }
@@ -25,7 +25,7 @@ sh 'mvn test'
 stage('DEPLOY'){
 steps
 {
-withMaven(maven : 'MVN3.3.9')
+withMaven(maven : 'maven')
 {
 sh 'mvn deploy'
 }
