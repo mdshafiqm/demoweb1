@@ -22,11 +22,15 @@ sh 'mvn test'
 }
 }
 
-stage('DEPLOY'){
+stage('DEPLOY confirmation'){
 steps
 {
-{
-input(Do you want to proceed)
+input('DO you want to Proceed')
+
+}
+}
+stage('DEPLOY'){
+steps
 {
 withMaven(maven : 'maven')
 {
