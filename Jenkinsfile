@@ -25,6 +25,9 @@ sh 'mvn test'
 stage('DEPLOY'){
 steps
 {
+{
+input(Do you want to proceed)
+{
 withMaven(maven : 'maven')
 {
 sh 'mvn deploy'
